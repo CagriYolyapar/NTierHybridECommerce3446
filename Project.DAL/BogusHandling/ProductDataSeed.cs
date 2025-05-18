@@ -19,7 +19,7 @@ namespace Project.DAL.BogusHandling
             {
                 Product p = new()
                 {
-                    Id = 1,
+                    Id = i,
                     ProductName = new Commerce("tr").ProductName(),
                     UnitPrice = Convert.ToDecimal(new Commerce("tr").Price()),
                     UnitsInStock = 100,

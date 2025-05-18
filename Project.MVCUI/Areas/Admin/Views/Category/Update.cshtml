@@ -1,0 +1,22 @@
+﻿@model Category
+
+<form asp-controller="Category" asp-action="Update" method="post" class="p-3 w-75 m-auto">
+
+    <input type="hidden" asp-for="Id"/>
+
+    <div class="mb-3">
+        <label>Kategori ismi giriniz</label>
+        <input asp-for="CategoryName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Acıklama giriniz</label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        
+       <button class="btn btn-warning">Kategori Güncelle</button>
+    </div>
+
+</form>
