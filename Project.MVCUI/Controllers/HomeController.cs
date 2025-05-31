@@ -41,8 +41,15 @@ namespace Project.MVCUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterRequestModel model)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(model); 
+            //}
+
+
             Guid specId = Guid.NewGuid();
 
+            //Map'lemek , Gelen bir tipteki bilgileri baska bir tipe aktarmak
             AppUser appUser = new()
             {
                 UserName = model.UserName,

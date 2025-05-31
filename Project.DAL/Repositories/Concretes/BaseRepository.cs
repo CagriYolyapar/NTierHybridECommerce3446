@@ -16,10 +16,16 @@ namespace Project.DAL.Repositories.Concretes
         readonly MyContext _context;
         readonly DbSet<T> _dbSet;
 
+
+
+
         public BaseRepository(MyContext context)
         {
+
+
             _context = context;
             _dbSet = _context.Set<T>();
+
         }
         public async Task CreateAsync(T entity)
         {

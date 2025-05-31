@@ -1,0 +1,43 @@
+﻿@model ProductPageVm
+
+@*
+Eger Form üzerinden bir dosya gönderecek iseniz Form tag'inizin kesinlikle özel bir attribute'a sahip olması gerekir...Bu attribute enctype isimli attribute'tur..Ve degerinin multipart/form-data seklinde verilmesi gerekir
+
+
+*@
+
+<form asp-controller="Product" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label>Ürün ismi giriniz</label>
+        <input asp-for="Product.ProductName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Ürün fiyatı giriniz</label>
+        <input asp-for="Product.UnitPrice" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Kategori seciniz</label>
+        <select asp-for="Product.CategoryId" asp-items='new SelectList(Model.Categories,"Id","CategoryName")'>
+            Lutfen kategori seciniz
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Stok giriniz</label>
+        <input asp-for="Product.UnitsInStock" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Resim dosyası yükleyiniz</label>
+        <input type="file" name="formFile" class="form-control" /> @*Buradaki name property'si cok kritik cünkü buradaki resim bilgisini action'iniz bu isimdeki parametre ile karsılayacak*@
+    </div>
+
+
+
+    <div class="mb-3">
+        <label>Kategori ismi giriniz</label>
+        <button class="btn btn-primary">Ürün ekle</button>
+    </div>
+</form>

@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Project.BLL.Managers.Abstracts;
+using Project.BLL.Managers.Concretes;
 using Project.ENTITIES.Models;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles ="Admin")]
     public class CategoryController : Controller
     {
 

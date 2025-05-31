@@ -28,7 +28,7 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
-app.UseStaticFiles();
+app.UseStaticFiles(); //wwwroot'a direkt ulasmanızı saglayan metottur...
 
 app.UseRouting();
 app.UseSession();

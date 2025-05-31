@@ -11,5 +11,6 @@ namespace Project.DAL.Repositories.Concretes
 {
     public class AppUserProfileRepository(MyContext context) : BaseRepository<AppUserProfile>(context),IAppUserProfileRepository
     {
+       
     }
 }
