@@ -9,7 +9,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     //[Authorize("Admin")] //BU sekilde bir Authorization vermeniz bir police ayarlamanız demektir...Demek ki Admin isminde özel bir yetki sistemi ayarlamanız var ve onu kullanmak istiyorsunuz demektir
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         readonly IProductManager _productManager;
